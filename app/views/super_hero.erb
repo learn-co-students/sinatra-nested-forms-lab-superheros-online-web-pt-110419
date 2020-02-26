@@ -1,1 +1,47 @@
 
+<h1>Create a Team and Heroes!</h1>
+
+<form action="/teams" method="post">
+
+<label for="name">Team Name:</label>
+<input type="text" name="team[name]">
+<br>
+<label for="motto"> Team Motto: </label>
+<input type="text" name="team[motto]">
+<br>
+<h3>Gundam Meister 1</h3>
+<br>
+<label for="member1_name">Gundam Meister 1 Name:</label>
+<input id="member1_name" type="text" name="team[members][name][][member1_name]">
+<br>
+<label for="member1_power">Gundam Meister 1 Power:</label>
+<input id="member1_power" type="text" name="team[members][name][][member1_power]">
+<br>
+<label for="member1_bio">Gundam Meister 1 Bio:</label>
+<input id="member1_bio" type="text" name="team[members][name][][member1_bio]">
+<br>
+<h3>Gundam Meister 2</h3>
+<br>
+<label for="member2_name">Gundam Meister 2 Name:</label>
+<input id="member2_name" type="text" name="team[members][name][][member2_name]">
+<br>
+<label for="member2_power">Gundam Meister 2 Power:</label>
+<input id="member2_power" type="text" name="team[members][name][][member2_power]">
+<br>
+<label for="member2_bio">Gundam Meister 2 Bio:</label>
+<input id="member2_bio"type="text" name="team[members][name][][member2_bio]">
+<br>
+<h3>Gundam Meister 3</h3>
+<br>
+<label for="member3_name">Gundam Meister 3 Name:</label>
+<input id="member3_name"type="text" name="team[members][name][][member3_name]">
+<br>
+<label for="member3_power">Gundam Meister 3 Power:</label>
+<input id="member3_power" type="text" name="team[members][name][][member3_power]">
+<br>
+<label for="member3_bio">Gundam Meister 3 Bio:</label>
+<input id="member3_bio" type="text" name="team[members][name][][member3_bio]">
+<br>
+<br>
+<input type="submit" value="submit">
+</form>
