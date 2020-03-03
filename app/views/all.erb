@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>All teams! </title>
+  </head>
+  <body>
+    <a href="/">Add new team</a>
+    <h1>All teams:</h1>
+    <ol>
+      <%Team.all.each do |team| %>
+        <a href="./<%=team.id%>"><h3><li><%=team.name%></li></h3></a>
+      <%end%>
+    </ol>
+  </body>
+</html>

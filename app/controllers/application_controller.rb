@@ -21,7 +21,7 @@ class App < Sinatra::Base
     end
 
     get '/teams/list' do
-      "list teams"
+      erb :all
     end
 
     get '/teams/:id' do
