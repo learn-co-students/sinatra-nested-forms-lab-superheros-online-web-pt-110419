@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>New Team & Heroes</title>
+  </head>
+  <body>
+    <a href="/">Add new team</a> <a href="/teams/list">List all teams</a>
+    <h1>Create a Team and Heroes!</h1>
+    <form action="/teams" method="post">
+        <p><label for="team_name">Team Name: </label>
+        <input type="text" name="team[name]" id="team_name"></p>
+        <p><label for="team_motto">Team Motto: </label>
+        <input type="text" name="team[motto]" id="team_motto"></p>
+        <% for i in 1..3 do %>
+        <h2><%="Hero #{i}"%></h2>
+        <p><label for=<%="member#{i}_name"%>>Hero's Name</label>
+        <input type="text" name="team[heroes][][name]" id="<%="member#{i}_name"%>"></p>
+        <p><label for=<%="member#{i}_power"%>>Hero's Power</label>
+        <input type="text" name="team[heroes][][power]" id="<%="member#{i}_power"%>"></p>
+        <p><label for=<%="member#{i}_bio"%>>Hero's Biography</label>
+        <input type="text" name="team[heroes][][bio]" id="<%="member#{i}_bio"%>"></p>
+        <% end %>
+        <p><label for="submit"></label>
+        <input type="submit" name="submit" id="submit"></p>
+    </form>
+
+  </body>
+</html>
